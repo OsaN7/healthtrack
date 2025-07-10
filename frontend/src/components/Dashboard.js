@@ -44,11 +44,13 @@ function Dashboard({ token, onLogout }) {
   };
 
   return (
-    <div>
-      <h2>Dashboard</h2>
-      <button onClick={onLogout}>Logout</button>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      <div>
+    <div className="container">
+      <div className="dashboard-header">
+        <h2>Dashboard</h2>
+        <button onClick={onLogout}>Logout</button>
+      </div>
+      {error && <p className="error">{error}</p>}
+      <div className="entry-input-group">
         <input
           value={newEntry}
           onChange={(e) => setNewEntry(e.target.value)}
@@ -56,10 +58,10 @@ function Dashboard({ token, onLogout }) {
         />
         <button onClick={handleAddEntry}>Add</button>
       </div>
-      <ul>
+      <ul className="entries-list">
         {entries.map((entry) => (
           <li key={entry.id}>
-            {entry.description}{' '}
+            {entry.description}
             <button onClick={() => handleDelete(entry.id)}>Delete</button>
           </li>
         ))}

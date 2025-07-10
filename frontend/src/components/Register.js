@@ -22,25 +22,25 @@ function Register() {
     }
   };
 
-  return (
-    <div>
+   return (
+    <div className="container">
       <h2>Register</h2>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      {success && <p style={{ color: 'green' }}>{success}</p>}
+      {error && <p className="error">{error}</p>}
+      {success && <p className="success">{success}</p>}
       <form onSubmit={handleSubmit}>
         <input
           placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
-        /><br />
+        />
         <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-        /><br />
+        />
         <button type="submit">Register</button>
       </form>
     </div>
@@ -48,3 +48,4 @@ function Register() {
 }
 
 export default Register;
+  

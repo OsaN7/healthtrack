@@ -18,24 +18,24 @@ function Login({ onLogin }) {
     }
   };
 
-  return (
-    <div>
+   return (
+    <div className="container">
       <h2>Login</h2>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {error && <p className="error">{error}</p>}
       <form onSubmit={handleSubmit}>
         <input
           placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
-        /><br />
+        />
         <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-        /><br />
+        />
         <button type="submit">Login</button>
       </form>
     </div>
