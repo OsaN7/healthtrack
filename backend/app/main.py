@@ -16,14 +16,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-
-app.include_router(auth.router,prefix="/auth")
-app.include_router(health.router,prefix="/health")
+app.include_router(auth.router)
+app.include_router(health.router)
 
 
 @app.get("/")
 async def root():
     return {"message": "HealthTrack API is running"}
-
-
