@@ -1,0 +1,241 @@
+/* Common Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f9fc;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Container */
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h2 {
+  text-align: center;
+  color: #004aad;
+  margin-bottom: 25px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Error / Success Messages */
+.error {
+  color: #ff4d4f;
+  background: #fff1f0;
+  border: 1px solid #ffa39e;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-header button {
+  width: auto;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Entry Form */
+.card.entry-form {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+}
+
+.card.entry-form h3 {
+  text-align: center;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+
+.entry-input-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.entry-input-group input {
+  flex: 1 1 120px;
+  padding: 12px 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1.5px solid #cbd5e0;
+}
+
+.entry-input-group input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.3);
+}
+
+.entry-input-group button {
+  flex-shrink: 0;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.entry-input-group button:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+}
+
+/* Entries */
+.entries-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.entry-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.entry-card h4 {
+  margin-bottom: 15px;
+  color: #004aad;
+}
+
+.progress-item {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.progress-bar {
+  background: #eee;
+  border-radius: 8px;
+  height: 10px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.progress-bar .fill {
+  height: 100%;
+  background: #4caf50;
+  border-radius: 8px;
+  transition: width 0.3s ease-in-out;
+}
+
+.delete-btn {
+  margin-top: 10px;
+  background: #ff4d4f;
+  border: none;
+  padding: 6px 10px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #ff7875;
+}
+
+/* No entries */
+.no-entries {
+  text-align: center;
+  color: #666;
+  padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .entry-input-group {
+    flex-direction: column;
+  }
+
+  .entry-input-group button {
+    width: 100%;
+  }
+}
+/* Card styles */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Progress bar container */
+.progress-bar {
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  width: 100%;
+  height: 20px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+/* Animated fill */
+.fill {
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  width: 0%;
+  animation: fillProgress 1s ease-out forwards;
+}
+
+/* Fill animation */
+@keyframes fillProgress {
+  from { width: 0%; }
+  to { width: var(--progress-width); }
+}
+
+/* Entry form */
+.entry-form input, .entry-form button {
+  margin: 5px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Entries grid */
+.entries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Delete button */
+.delete-btn {
+  background-color: #ff4d4f;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.delete-btn:hover {
+  background-color: #e60000;
+}
